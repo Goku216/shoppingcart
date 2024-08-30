@@ -8,7 +8,11 @@ export const Header = ({ cart, clicked, setClicked }) => {
 
   return (
     <header className="max-w-7xl text-lg m-auto h-17 py-2 px-4 flex items-center justify-between border-b-1 border-zinc-200">
-      <Link to="/" className="flex items-center">
+      <Link
+        onClick={() => setClicked("/")}
+        to="/"
+        className="flex items-center"
+      >
         <img className="w-10" src={Logo} alt="logo" />
         <span className="m-1">Shopping Cart</span>
       </Link>
@@ -36,7 +40,11 @@ export const Header = ({ cart, clicked, setClicked }) => {
           Cart
         </NavLink>
       </nav>
-      <Link to="/cart" className="font-medium">
+      <Link
+        onClick={() => setClicked("/cart")}
+        to="/cart"
+        className="font-medium"
+      >
         Cart: {cart.length}
       </Link>
     </header>
