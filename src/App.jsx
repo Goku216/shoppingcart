@@ -5,10 +5,9 @@ import { AllRoutes } from "./routes/AllRoutes";
 
 function App() {
   const [cart, setCart] = useState("");
-  const [clicked, setClicked] = useState("/");
   return (
     <>
-      <Header cart={cart} clicked={clicked} setClicked={setClicked} />
+      <Header cart={cart} />
       <AllRoutes cart={cart} setCart={setCart} />
     </>
   );
