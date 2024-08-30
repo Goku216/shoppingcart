@@ -1,0 +1,17 @@
+import "./App.css";
+import React, { useState } from "react";
+import { Header } from "./components/Header";
+import { AllRoutes } from "./routes/AllRoutes";
+
+function App() {
+  const [cart, setCart] = useState("");
+  const [clicked, setClicked] = useState("/");
+  return (
+    <>
+      <Header cart={cart} clicked={clicked} setClicked={setClicked} />
+      <AllRoutes cart={cart} setCart={setCart} />
+    </>
+  );
+}
+
+export default App;
